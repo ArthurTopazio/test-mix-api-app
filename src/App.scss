@@ -3,47 +3,44 @@
 
 .App {
   margin: 0;
-  // bg settings test
   min-height: 100vh;
- 
- // backgrouend-position: 0, 0;
-  /*
-  background-size: 100% 40vh;
-  background-repeat: no-repeat;
-  place-items: center;
-  opacity: 1;*/
 }
 
-.test__bg {
-  overflow: hidden;
-  height: 40vh;
- }
-
-.test__bg_child {
-  height: 40vh;
-  background: url('https://i.stack.imgur.com/SvWWN.png') center / cover no-repeat;
- // background-size: 100% 40vh;
+.content__box {
+  position: relative;
+  top: -20px;
 }
 
 .test__img {
   margin-top: 20px;
   width: 100%;
-  height: 250px;
+  height: 450px;
   object-fit: cover;
   object-position: center;
 }
 
+.img__content {
+  width: 50%;
+  min-height: 100%;
+  background-color: red;
+  position: relative;
+  top: -215px;
+  -webkit-transform: translate(50%, -50%);
+  
+}
+
 .test {
-  width: 80%;
+  width: 90%;
+  min-height: 100vh;
   margin: auto;
   background-color: rgb(255, 255, 255);
   font-size: 30px;
   text-align: center;
   font-weight: bold;
   position: relative;
-  top: -70px;
+  top: -120px;
   border-radius: 15px;
-  opacity: 0.9;
+  opacity: 0.8;
   backdrop-filter: blur(8px);
 
  // @include flex(row, space-between, center, wrap);
