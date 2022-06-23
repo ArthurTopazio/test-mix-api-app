@@ -1,0 +1,13 @@
+//all basic css interfaces
+
+@mixin flexColumn($linkColor, $hoveLinkColor) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    color: $linkColor;
+    &:hover {
+      color: $hoveLinkColor;
+    }
+  }
+}
