@@ -8,7 +8,75 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div className='test__bg'>
+        <div className='test__bg_child'>
+          <Header />
+        </div>
+      </div>
+      <img className='test__img' src="https://i.stack.imgur.com/SvWWN.png" alt="" />
+
+      <div className='test'>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+        <div>text color test</div>
+      </div>
       <Content />
       <Footer />
     </div>
