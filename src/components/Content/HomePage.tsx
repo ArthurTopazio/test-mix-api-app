@@ -11,8 +11,9 @@ const HomePage = () => {
       </div>
       <div className={style.content}>
         <div>My Resume</div>
+        <div>push test11</div>
         <div>text color test</div>
-        <div>text color test</div>
+        <div>text end test</div>
       </div>
     </div>
   )
