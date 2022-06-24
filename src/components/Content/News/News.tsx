@@ -1,11 +1,11 @@
 import style from './News.module.scss'
 import headerImg from '../../../assets/images/header-photos/winter_space.jpg'
+import HeaderWall from '../../HeaderWall/HeaderWall'
 
 const News = () => {
   return (
     <div className={style.content__wrapper}>
-      <img className={style.header__img}
-        src={headerImg} alt="picture" />
+      <HeaderWall headerImg={headerImg} />
       <div className={style.banner}>
         <div>some textsome textf</div>
         <button>some button</button>
