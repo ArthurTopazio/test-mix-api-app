@@ -3,9 +3,6 @@ import Button from '@mui/material/Button'
 
 import style from './HeaderBanner.module.scss'
 
-let mainText = `Thanks for visit my application, I realy hope You enjoy it.
-<br />If You interest in cooperation, send me message`
-
 const HeaderBanner = () => {
   return (
     <div className={style.banner}>
@@ -16,10 +13,11 @@ const HeaderBanner = () => {
           If You interest in cooperation, send me message
         </p>
       </div>
-      <Button href='perereacmb@gmail.com' aria-label="fingerprint"
+      <Button href='perereacmb@gmail.com' sx={{ mt: 3 }}
         variant="contained" size='large'>Send message</Button>
     </div>
   )
 }
 
 export default HeaderBanner
+
