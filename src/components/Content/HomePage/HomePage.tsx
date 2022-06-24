@@ -1,10 +1,11 @@
 import style from './HomePage.module.scss'
+import headerImg from '../../../assets/images/header-photos/tech1.webp'
 
 const HomePage = () => {
   return (
     <div className={style.content__wrapper}>
       <img className={style.header__img}
-        src="https://i.stack.imgur.com/SvWWN.png" alt="picture" />
+        src={headerImg} alt="picture" />
       <div className={style.banner}>
         <div>some textsome textf</div>
         <button>some button</button>
