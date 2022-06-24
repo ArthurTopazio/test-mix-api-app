@@ -1,19 +1,44 @@
+@import '../../assets/scss/variables.scss';
 
 .banner {
-  width: 50%;
+  width: 65%;
   text-align: center;
-  position: relative;
-    transform: translate(50%, -380px);
+  position: absolute;
+  transform: translate(27%, 100px);
   color: white;
  //@error: 2px rgb(51, 51, 51); /* width and color */
-  text-shadow: 2px 2px 5px #000,
+  text-shadow: 2px 2px 5px #000;
+  z-index: 2;
+   
+
 }
 
 .headline__text {
-  font-size: 2.1em;
+  @media (max-width: $largeBP) {
+    font-size: 1.8em;  
+  }
+
+  @media (max-width: $mediumBP) {
+    font-size: 1.8em;
+  }
+
+  @media (max-width: $smallBP) {
+    font-size: 1.4em;
+  }
 }
 
 .main__text {
-  font-size: 1.2em;
   font-weight: bold;
+
+  @media (max-width: $largeBP) {
+    font-size: 1.1em;  
+  }
+
+  @media (max-width: $mediumBP) {
+    font-size: 1em;
+  }
+
+  @media (max-width: $smallBP) {
+    font-size: 0.9em;
+  }
 }

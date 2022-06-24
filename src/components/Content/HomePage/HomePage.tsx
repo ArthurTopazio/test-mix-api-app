@@ -7,14 +7,14 @@ const HomePage = () => {
   return (
     <div className={style.content__wrapper}>
       <HeaderWall headerImg={headerImg} />
-      <HeaderBanner />
+
       <div className={style.content}>
         <div>My Resume</div>
         <div>push test2</div>
         <div>text color test</div>
         <div>text end test</div>
         <div>text end test</div>
-        <div>lorem*2000</div>
+        <div>lorem*20</div>
       </div>
     </div>
   )

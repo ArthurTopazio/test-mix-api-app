@@ -6,10 +6,6 @@ const News = () => {
   return (
     <div className={style.content__wrapper}>
       <HeaderWall headerImg={headerImg} />
-      <div className={style.banner}>
-        <div>some textsome textf</div>
-        <button>some button</button>
-      </div>
       <div className={style.content}>
         <div>NEWS</div>
         <div>text color test</div>
