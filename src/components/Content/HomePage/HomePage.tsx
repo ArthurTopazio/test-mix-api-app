@@ -13,6 +13,8 @@ const HomePage = () => {
         <div>push test2</div>
         <div>text color test</div>
         <div>text end test</div>
+        <div>text end test</div>
+        <div>lorem*2000</div>
       </div>
     </div>
   )
