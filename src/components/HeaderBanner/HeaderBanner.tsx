@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 
 import style from './HeaderBanner.module.scss'
 
+// props: h1 text, p text, button name, button href
 const HeaderBanner = () => {
   return (
     <div className={style.banner}>
@@ -13,7 +14,7 @@ const HeaderBanner = () => {
           If You interest in cooperation, send me message
         </p>
       </div>
-      <Button href='perereacmb@gmail.com' sx={{ mt: 3 }}
+      <Button href='' sx={{ mt: 3 }}
         variant="contained" size='large'>Send message</Button>
     </div>
   )
