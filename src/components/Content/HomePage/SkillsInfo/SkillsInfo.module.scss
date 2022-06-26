@@ -1,0 +1,25 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/mixins.scss';
+
+.wrapper {
+  border: 1px solid red;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.topic {
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: $boxShadow;
+  background-color: $h2BgColor;
+  color: white;
+  width: 200px;
+}
+
+.cards__box {
+  padding: 15px;
+  border: 1px solid yellow;
+  @include flex(row, flex-start, center, wrap);
+  gap: 30px;
+}
