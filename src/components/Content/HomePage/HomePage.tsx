@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab'
 import style from './HomePage.module.scss'
 import headerImg from '../../../assets/images/header-photos/tech1.webp'
 import HeaderWall from '../../HeaderWall/HeaderWall'
+import SkillsInfo from './SkillsInfo/SkillsInfo'
 
 //HeaderImage add to props
 const HomePage = () => {
@@ -21,12 +22,13 @@ const HomePage = () => {
       <div className={style.content}>
         <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
           <Tabs value={value} onChange={handleChange} centered>
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+            <Tab sx={{ width: '30%' }} label="My skills" />
+            <Tab sx={{ width: '30%' }} label="Employment history" />
+            <Tab sx={{ width: '30%' }} label="Other information" />
           </Tabs>
         </Box>
-        <div>{value}</div>
+        {value == 0 ? <SkillsInfo /> : value == 1 ? <div>Employment</div>
+          : <div>Other information</div>}
       </div>
     </div>
   )

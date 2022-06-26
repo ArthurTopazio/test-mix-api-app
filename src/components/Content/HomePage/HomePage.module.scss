@@ -11,14 +11,14 @@
  // @include flex(row, space-between, center, wrap);
   
   @media (max-width: $largeBP) {
-    color: red;  
+      
   }
 
   @media (max-width: $mediumBP) {
-    color: yellow;
+    
   }
 
   @media (max-width: $smallBP) {
-    color: green;
+    
   }
 }
