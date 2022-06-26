@@ -1,6 +1,14 @@
+@import '../../../../../assets/scss/variables.scss';
+
 .card {
-  border: 1px solid black;
   width: 48%;
+  margin-bottom: 30px;
+  background-color: rgb(204, 218, 230);
+  box-shadow: $boxShadow;
+    
+  @media (max-width: $mediumBP) {
+  width: 100%;
+  }
 }
 
 .h1 {

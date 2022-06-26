@@ -7,18 +7,4 @@
 
 .content {
   @include content;
-
- // @include flex(row, space-between, center, wrap);
-  
-  @media (max-width: $largeBP) {
-      
-  }
-
-  @media (max-width: $mediumBP) {
-    
-  }
-
-  @media (max-width: $smallBP) {
-    
-  }
 }
