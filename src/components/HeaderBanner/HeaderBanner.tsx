@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import style from './HeaderBanner.module.scss'
 
 // props: h1 text, p text, button name, button href
-const HeaderBanner = () => {
+const HeaderBanner = (props: any) => {
   return (
     <div className={style.banner}>
       <h1 className={style.headline__text}>App created by Arthur Mishiev</h1>
