@@ -9,7 +9,7 @@ let initialState = [
     button_link: '/form',
   },
   {
-    id: 1,
+    id: 2,
     name: 'News',
     h1: 'News from around the world',
     text: `G-7 Leaders at Summit Weakened by Inflation, Impatience at Home`,

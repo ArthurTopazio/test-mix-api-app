@@ -6,18 +6,13 @@ import HomePage from './components/Content/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import News from './components/Content/News/News';
-import HeaderBanner from './components/HeaderBanner/HeaderBanner';
+import HeaderBannerRoutes from './components/HeaderBanerRoutes/HeaderBannerRoutes';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path=""
-          element={<HeaderBanner />} />
-        <Route path="/news"
-          element={<HeaderBanner />} />
-      </Routes>
+      <HeaderBannerRoutes />
       <Routes>
         <Route path=""
           element={<HomePage />} />
