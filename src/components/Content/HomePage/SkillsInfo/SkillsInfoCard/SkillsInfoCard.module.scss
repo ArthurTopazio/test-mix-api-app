@@ -11,14 +11,21 @@
   }
 }
 
+.logo {
+  width: 60px;
+}
+
 .h1 {
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-skill__items {
-
+.skill__items {
 }
 
-skill__item {
-
+.skill__item {
+  text-shadow: 1px 1px 3px violet;
 }

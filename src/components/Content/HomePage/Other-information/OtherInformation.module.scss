@@ -1,0 +1,23 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/mixins.scss';
+
+.wrapper {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.topic {
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: $boxShadow;
+  background-color: $h2BgColor;
+  color: white;
+}
+
+.cards__box {
+  padding: 15px;
+  @include flex(row, flex-start, center, wrap);
+  gap: 4%;
+}
