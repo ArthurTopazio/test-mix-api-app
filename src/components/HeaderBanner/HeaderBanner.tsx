@@ -6,7 +6,7 @@ import style from './HeaderBanner.module.scss'
 
 // props: h1 text, p text, button name, button href
 const HeaderBanner = (props: any) => {
-  console.log('header_bunner props', props)
+
   return (
     <div className={style.banner}>
       <h1 className={style.headline__text}>{props.data.h1}</h1>
