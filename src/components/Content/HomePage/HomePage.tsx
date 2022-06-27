@@ -2,6 +2,7 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
+import { connect } from 'react-redux'
 
 import style from './HomePage.module.scss'
 import headerImg from '../../../assets/images/header-photos/tech1.webp'
@@ -11,7 +12,8 @@ import EmploymentHistory from './EmpoymentHistory/EmploymentHistory'
 import OtherInformation from './Other-information/OtherInformation'
 
 //HeaderImage add to props
-const HomePage = () => {
+const HomePage = (props: any) => {
+  console.log('home page props:', props)
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -29,13 +31,18 @@ const HomePage = () => {
             <Tab sx={{ width: '30%' }} label="Other information" />
           </Tabs>
         </Box>
-        {value == 0 ? <SkillsInfo /> : value == 1 ? <EmploymentHistory />
-          : <OtherInformation />}
+        {value == 0 ? <SkillsInfo skills={props.resume.it_skills} />
+          : value == 1 ? <EmploymentHistory employment_history={props.resume.employment_history} />
+            : <OtherInformation other_information={props.resume.other_information} />}
       </div>
     </div>
   )
 }
 
-// mapStateToProps props for all categories
+let mapStateToProps = (state: any) => {
+  return {
+    resume: state.home,
+  }
+}
 
-export default HomePage
+export default connect(mapStateToProps)(HomePage)

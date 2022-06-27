@@ -20,4 +20,4 @@ ReactDOM.createRoot(
   </BrowserRouter>
 );
 
-reportWebVitals(console.log);
+//reportWebVitals(console.log);

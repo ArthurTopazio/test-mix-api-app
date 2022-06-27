@@ -1,7 +1,8 @@
 import SkillsInfoCard from "../SkillsInfo/SkillsInfoCard/SkillsInfoCard"
 import style from './OtherInformation.module.scss'
 
-function OtherInformation() {
+function OtherInformation(props: any) {
+  console.log('other information', props)
   return (
     <div className={style.wrapper}>
       <h2 className={style.topic}>SKILLS</h2>

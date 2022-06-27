@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { connect } from "react-redux";
+import { connect } from "react-redux"
 
 import HeaderBanner from '../HeaderBanner/HeaderBanner'
 
