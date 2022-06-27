@@ -18,6 +18,6 @@
 
 .cards__box {
   padding: 15px;
-  @include flex(row, flex-start, center, wrap);
+  @include flex(row, flex-start, baseline, wrap);
   gap: 4%;
 }

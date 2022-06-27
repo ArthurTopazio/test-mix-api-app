@@ -1,4 +1,5 @@
 let initialState = {
+  main_wallpaper: 'https://cutewallpaper.org/22/wires-wallpapers/2831313428.jpg',
   it_skills: {
     name: 'SKILLS',
     cards: [

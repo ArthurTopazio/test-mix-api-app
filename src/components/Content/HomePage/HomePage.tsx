@@ -5,7 +5,6 @@ import Tab from '@mui/material/Tab'
 import { connect } from 'react-redux'
 
 import style from './HomePage.module.scss'
-import headerImg from '../../../assets/images/header-photos/tech1.webp'
 import HeaderWall from '../../HeaderWall/HeaderWall'
 import SkillsInfo from './SkillsInfo/SkillsInfo'
 import EmploymentHistory from './EmpoymentHistory/EmploymentHistory'
@@ -22,7 +21,7 @@ const HomePage = (props: any) => {
 
   return (
     <div className={style.content__wrapper}>
-      <HeaderWall headerImg={headerImg} />
+      <HeaderWall headerImg={props.resume.main_wallpaper} />
       <div className={style.content}>
         <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
           <Tabs value={value} onChange={handleChange} centered>

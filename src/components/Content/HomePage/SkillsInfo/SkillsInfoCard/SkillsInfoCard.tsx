@@ -1,8 +1,9 @@
 import style from './SkillsInfoCard.module.scss'
 
 const SkillsInfoCard = (props: any) => {
-  console.log('SkillsCard props', props)
-  let elements = props.items.map((item: any) => <p className={style.skill__item}>{item}</p>)
+  let icon = 'https://ouch-cdn2.icons8.com/IdJhMQyhpbcOQz4fdrESfhaJHmNfUC4hn5yLcXi8IZQ/rs:fit:555:456/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNDc2/LzI5ZmYwZGNiLWEy/NmYtNGNhNy1hNjAw/LTYyNTI5ZGYxNzlh/Mi5zdmc.png'
+  let elements = props.items.map((item: any) => <p className={style.skill__item}>
+    <img className={style.icon} src={icon} /> {item}</p>)
 
   return (
     <div className={style.card}>

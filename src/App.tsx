@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import News from './components/Content/News/News';
 import HeaderBannerRoutes from './components/HeaderBanerRoutes/HeaderBannerRoutes';
+import FormPage from './components/Content/FormPage/FormPage';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           element={<HomePage />} />
         <Route path="/news"
           element={<News />} />
+        <Route path="/form"
+          element={<FormPage />} />
       </Routes>
       <Footer />
     </div>
