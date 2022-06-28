@@ -2,8 +2,9 @@
 
 .wrapper {
   background-color: rgb(202, 202, 122); 
-  position: relative;
-  bottom: 55px;
+  position: absolute;
+  width: 100%;
+  margin-top: -51px;
 }
 
 .wrapperAlt {
