@@ -1,4 +1,40 @@
-.layout {
+@import './../../assets/scss/variables.scss';
+
+.wrapper {
+  background-color: rgb(202, 202, 122); 
+  position: relative;
+  bottom: 55px;
+}
+
+.wrapperAlt {
+  background-color: rgb(202, 202, 122); 
+  position: relative;
+  bottom: -126px;
+}
+
+.box {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(59, 197, 59);
+
+  @media (max-width: $smallBP) {
+    flex-direction: column;
+  }
+
+}
+
+.item {
+  width: 30%;
+  height: 150px;
+  background-color: rgb(100, 100, 248);
+  border: 1px double black;
+
   
-  
+  @media (max-width: $smallBP) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
