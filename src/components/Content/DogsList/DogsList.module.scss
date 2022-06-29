@@ -1,0 +1,26 @@
+@import './../../../assets/scss/variables.scss';
+@import './../../../assets/scss/mixins.scss';
+
+.content__wrapper {
+  @include contentWrapper;
+  top: 160px;
+}
+
+.content {
+  @include content;
+
+
+ // @include flex(row, space-between, center, wrap);
+  
+  @media (max-width: $largeBP) {
+      
+  }
+
+  @media (max-width: $mediumBP) {
+   
+  }
+
+  @media (max-width: $smallBP) {
+    
+  }
+}

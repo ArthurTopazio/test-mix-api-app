@@ -24,6 +24,8 @@ const Footer = () => {
         element={<FooterElement style={false} />} />
       <Route path="/form"
         element={<FooterElement style={true} />} />
+      <Route path="/dogs"
+        element={<FooterElement style={true} />} />
     </Routes>
   )
 }

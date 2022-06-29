@@ -13,7 +13,8 @@ const Header = () => {
         >News</NavLink>
         <NavLink to={'/form'}
         >Form</NavLink>
-        <li>Dogs</li>
+        <NavLink to={'/dogs'}
+        >Dogs</NavLink>
         <NavLink to={''}
         >Home</NavLink>
       </ul>
