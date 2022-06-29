@@ -1,7 +1,6 @@
-import * as axios from 'axios'
+import axios from 'axios'
 
 const dogsInstance = axios.create({
-  withCredentials: true,
   baseURL: 'https://dog.ceo/api/',
 })
 
