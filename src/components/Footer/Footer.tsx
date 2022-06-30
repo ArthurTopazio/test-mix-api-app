@@ -7,9 +7,32 @@ const FooterElement = (props: any) => {
   return (
     <div className={!props.style ? style.wrapper : style.wrapperAlt} >
       <div className={style.box}>
-        <div className={style.item}>my profile</div>
-        <div className={style.item}>open sorses</div>
-        <div className={style.item}>partneres</div>
+        <div className={style.item}>
+          <div className={style.caption}>Creator</div>
+          <ul className={style.list__items}>
+            <li>photo</li>
+            <li>contacts</li>
+            <li>socials</li>
+          </ul>
+        </div>
+        <div className={style.item}>
+          <div className={style.caption}>Resources</div>
+          <ul className={style.list__items}>
+            <li>book1</li>
+            <li>book2</li>
+            <li>book3</li>
+            <li>book4</li>
+          </ul>
+        </div>
+        <div className={style.item}>
+          <div className={style.caption}>Help & support</div>
+          <ul className={style.list__items}>
+            <li>Alexandr Sanin</li>
+            <li>Alexandr Paizak</li>
+            <li>Ivan Melnykov</li>
+            <li>Voloshina Viktoria</li>
+          </ul>
+        </div>
       </div>
     </div>
   )
