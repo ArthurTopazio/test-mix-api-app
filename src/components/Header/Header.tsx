@@ -97,7 +97,7 @@ const items: MenuItem[] = [
 // submenu keys of first level
 const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
 
-export const App: React.FC = () => {
+export const Burg: React.FC = () => {
   const [openKeys, setOpenKeys] = useState(['sub1']);
 
   const onOpenChange: MenuProps['onOpenChange'] = keys => {
