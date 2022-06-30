@@ -9,16 +9,19 @@ const DogsList = (props: any) => {
   }
 
   let testClick = () => {
-    alert('say hello')
     addDog(1)
   }
-
+  let elements = props.dogs.dogs_pictures.map((item: any) => <div className={style.dogs__card}><img
+    src={item} alt="dogs_picture" /></div>)
   return (
     <div className={style.content__wrapper}>
       <div className={style.content}>
-        dogs list
-        <img src={props.dogs.dogs_pictures[0]} alt="" />
-        <button onClick={testClick}>add dog</button>
+        <h2>dogs list</h2>
+        <div className={style.dogs__cards}>
+          <div className={style.dogs__card}><button className={style.add__dog} onClick={testClick}>add dog</button></div>
+          {elements}
+        </div>
+
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ const dogsInstance = axios.create({
 export const dogsAPI = {
   getRandomDogs(quantity = 1) {
     return dogsInstance.get(`breeds/image/random/${quantity}`)
-      .then(response => { return response });
+      .then(response => { return response.data });
   },
 }
 
