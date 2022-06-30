@@ -21,10 +21,15 @@
 }
 
 .logo {
+ margin-left: 16px;
+}
 
+.logo img {
+  width: 40px;
 }
 
 .nav {
+  margin-right: 16px;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -37,6 +42,20 @@
   @media (max-width: $mediumBP) {
     display: none;
   }
+}
+
+.nav button {
+  padding: 0px;
+  line-height: 0px;
+}
+
+a {
+  opacity: 1;
+  background: transparent;
+  color: rgb(52, 71, 103);
+  box-shadow: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 .burger__menu {
