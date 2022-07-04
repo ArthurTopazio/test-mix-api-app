@@ -21,15 +21,18 @@ const jokesReducer = (state = initialState, action: any) => {
 
 export const setJokes = (newJokes: any) => ({ type: SET_JOKES, newJokes })
 
-export const getJokes = (category: string = 'Any', lang?: string, blacklistFlags?: string,
-  type = 'single', contains?: string, amount?: number) => {
+export const getJokes = () => {
   return (dispatch: any) => {
-    jokesAPI.getJokes(category, lang, blacklistFlags, type, contains, amount)
+    jokesAPI.getJokes()
       .then((data: any) => {
-        dispatch(setJokes(data.joke || data.jokes));
+        dispatch(setJokes(data.joke));
       });
   }
 };
+
+//category: string = 'Any', lang?: string, blacklistFlags?: string,
+//type = 'single', contains?: string, amount?: number
+//category, lang, blacklistFlags, type, contains, amount
 
 
 

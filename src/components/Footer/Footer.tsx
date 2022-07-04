@@ -49,7 +49,7 @@ const Footer = () => {
         element={<FooterElement style={true} />} />
       <Route path="/dogs"
         element={<FooterElement style={true} />} />
-      <Route path="/dogs"
+      <Route path="/jokes"
         element={<FooterElement style={true} />} />
     </Routes>
   )

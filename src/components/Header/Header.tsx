@@ -135,6 +135,8 @@ const Header = () => {
         >Form</NavLink>
         <NavLink to={'/dogs'}
         >Dogs</NavLink>
+        <NavLink to={'/jokes'}
+        >Jokes</NavLink>
         <NavLink to={''}
         >Home</NavLink>
       </ul>
