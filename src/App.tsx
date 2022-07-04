@@ -8,6 +8,7 @@ import News from './components/Content/News/News'
 import HeaderBannerRoutes from './components/HeaderBanerRoutes/HeaderBannerRoutes'
 import FormPage from './components/Content/FormPage/FormPage'
 import DogsList from "./components/Content/DogsList/DogsList"
+import JokesPage from "./components/Content/JokesPage/JokesPage"
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           element={<FormPage />} />
         <Route path="/dogs"
           element={<DogsList />} />
+        <Route path="/jokes"
+          element={<JokesPage />} />
       </Routes>
       <Footer />
     </div>

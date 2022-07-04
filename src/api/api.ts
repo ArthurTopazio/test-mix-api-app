@@ -16,12 +16,14 @@ export const dogsAPI = {
 }
 
 export const jokesAPI = {
-  getJoke(category: string = 'Any', lang?: string, blacklistFlags?: string,
+  getJokes(category: string = 'Any', lang?: string, blacklistFlags?: string,
     type = 'single', contains?: string, amount?: number) {
-    return jokeInstance.get(`${category}?`)
+    return jokeInstance.get(`${category}?lang=${lang}&blacklistFlags=${blacklistFlags}
+    &type=${type}&contains=${contains}&amount=${amount}`)
       .then(response => { return response.data });
   },
 }
+
 
 //category (Any, Programming, Miscellaneous,Dark, Pun, Spooky, Christmas) Категория
 //lang=de, cs, es, fr, pt (язык)
