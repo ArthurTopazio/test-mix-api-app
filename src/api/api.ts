@@ -4,12 +4,31 @@ const dogsInstance = axios.create({
   baseURL: 'https://dog.ceo/api/',
 })
 
+const jokeInstance = axios.create({
+  baseURL: 'https://v2.jokeapi.dev/joke/',
+})
+
 export const dogsAPI = {
   getRandomDogs(quantity = 1) {
     return dogsInstance.get(`breeds/image/random/${quantity}`)
       .then(response => { return response.data });
   },
 }
+
+export const jokesAPI = {
+  getJoke(category: string = 'Any', lang?: string, blacklistFlags?: string,
+    type = 'single', contains?: string, amount?: number) {
+    return jokeInstance.get(`${category}?`)
+      .then(response => { return response.data });
+  },
+}
+
+//category (Any, Programming, Miscellaneous,Dark, Pun, Spooky, Christmas) Категория
+//lang=de, cs, es, fr, pt (язык)
+//blacklistFlags=nsfw,religious,political,racist,sexist,explicit (ограничений)
+//type=single / twopart (сэтап/панчлайн)
+//&contains=dddcscsdc включает слово
+//amount=5 количество
 
 
 /*
