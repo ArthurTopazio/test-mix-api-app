@@ -14,23 +14,24 @@ const FooterElement = (props: any) => {
             <li>contacts</li>
             <li>socials</li>
           </ul>
+          <img src="https://cdn.dribbble.com/users/1577045/screenshots/4914645/media/028d394ffb00cb7a4b2ef9915a384fd9.png?compress=1&resize=400x300&vertical=top" alt="user_photo" />
         </div>
         <div className={style.item}>
           <div className={style.caption}>Resources</div>
           <ul className={style.list__items}>
-            <li>book1</li>
-            <li>book2</li>
-            <li>book3</li>
-            <li>book4</li>
+            <li><a href='form'>Book</a></li>
+            <li><a href='form'>Book</a></li>
+            <li><a href='form'>Book</a></li>
+            <li><a href='form'>Book</a></li>
           </ul>
         </div>
         <div className={style.item}>
           <div className={style.caption}>Help & support</div>
           <ul className={style.list__items}>
-            <li>Alexandr Sanin</li>
-            <li>Alexandr Paizak</li>
-            <li>Ivan Melnykov</li>
-            <li>Voloshina Viktoria</li>
+            <li><a href='form'>Alexandr Sanin</a></li>
+            <li><a href='form'>Alexandr Paizak</a></li>
+            <li><a href='form'>Ivan Melnykov</a></li>
+            <li><a href='form'>Voloshina Viktoria</a></li>
           </ul>
         </div>
       </div>
