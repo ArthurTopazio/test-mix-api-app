@@ -1,132 +1,13 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import Form from './Form'
 
 import style from './FormPage.module.scss'
-import { withStyles } from "@mui/material"
-import Card from "@mui/material/Card"
-import CardContent from "@mui/material/CardContent"
-import CardActions from "@mui/material/CardActions"
-import TextField from '@mui/material/TextField'
-import MenuItem from "@mui/material/MenuItem"
-import Button from "@mui/material/Button"
-
-const courseCategory = [
-  {
-    value: "webDevelopment",
-    label: "Web Development"
-  },
-  {
-    value: "networking",
-    label: "Networking"
-  },
-  {
-    value: "computerScience",
-    label: "Computer Science"
-  }
-];
-
-const FormT = () => {
-
-  return (
-    <div>
-      <form>
-        <Card>
-          <CardContent>
-            <TextField
-              id="firstName"
-              label="First Name"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="lastName"
-              label="Last Name"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              select
-              id="course"
-              label="Course Category"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            >
-              {courseCategory.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-            <TextField
-              id="password"
-              label="Password"
-              type="password"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="confirmPassword"
-              label="Confirm Password"
-              type="password"
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-          </CardContent>
-          <CardActions >
-            <Button color="primary" >
-              SUBMIT
-            </Button>
-            <Button color="secondary">
-              CLEAR
-            </Button>
-          </CardActions>
-        </Card>
-      </form>
-    </div>
-  );
-};
-
-//yup method
-const validationSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(15, 'Too Long!')
-    .required('Please add some name'),
-  lastName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(12, 'Too Long!')
-    .required('Please add some surname'),
-  address: Yup.string()
-    .max(30, 'Please write You adress shortly'),
-  email: Yup.string()
-    .email('Invalid email')
-    .required('I cant get feedback without email'),
-  password: Yup.string()
-    .min(2, 'Too short for password')
-    .max(8, 'Too lang, max 8 symbols')
-    .required('Please write password'),
-  confirmPassword: Yup.string().oneOf([Yup.ref('password')], 'passwords incorrect')
-    .required('Password is incorrect'),
-})
 
 //example with yup
 const FormExample = () => (
   <div>
     <h1>Test form (added by Formik/Yup)</h1>
-    <FormT />
+    <Form />
   </div>
 )
 
