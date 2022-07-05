@@ -53,30 +53,40 @@ const form = props => {
                 'aria-label': 'Checkbox A',
               }}
             />
-            <TextField
-              id="firstName"
-              label="First Name"
-              value={values.firstName}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.firstName ? errors.firstName : ""}
-              error={touched.firstName && Boolean(errors.firstName)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="lastName"
-              label="Last Name"
-              value={values.lastName}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.lastName ? errors.lastName : ""}
-              error={touched.lastName && Boolean(errors.lastName)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
+            <div>
+              <TextField
+                id="firstName"
+                label="First Name"
+                value={values.firstName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                helperText={touched.firstName ? errors.firstName : ""}
+                error={touched.firstName && Boolean(errors.firstName)}
+                margin="dense"
+                variant="outlined"
+                sx={{
+                  width: '45%',
+                  bgcolor: {
+                    xs: 'primary.main',
+                    sm: 'yellow',
+                    md: 'green',
+                    lg: 'secondary.main',
+                    xl: 'black',
+                  }
+                }}
+              />
+              <TextField
+                id="lastName"
+                label="Last Name"
+                value={values.lastName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                helperText={touched.lastName ? errors.lastName : ""}
+                error={touched.lastName && Boolean(errors.lastName)}
+                margin="dense"
+                variant="outlined"
+              />
+            </div>
             <TextField
               id="email"
               label="Email"
