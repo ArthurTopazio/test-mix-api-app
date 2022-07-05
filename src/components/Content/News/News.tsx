@@ -1,6 +1,6 @@
 import style from './News.module.scss'
 import headerImg from '../../../assets/images/header-photos/winter_space.jpg'
-import HeaderWall from '../../HeaderWall/HeaderWall'
+import HeaderWall from '../../Header/HeaderWall/HeaderWall'
 
 const News = () => {
   return (

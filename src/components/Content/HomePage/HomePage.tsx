@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab'
 import { connect } from 'react-redux'
 
 import style from './HomePage.module.scss'
-import HeaderWall from '../../HeaderWall/HeaderWall'
+import HeaderWall from '../../Header/HeaderWall/HeaderWall'
 import SkillsInfo from './SkillsInfo/SkillsInfo'
 import EmploymentHistory from './EmpoymentHistory/EmploymentHistory'
 import OtherInformation from './Other-information/OtherInformation'

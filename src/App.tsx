@@ -5,7 +5,7 @@ import HomePage from './components/Content/HomePage/HomePage'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import News from './components/Content/News/News'
-import HeaderBannerRoutes from './components/HeaderBanerRoutes/HeaderBannerRoutes'
+import HeaderBannerRoutes from './components/Header/HeaderBanerRoutes/HeaderBannerRoutes'
 import FormPage from './components/Content/FormPage/FormPage'
 import DogsList from "./components/Content/DogsList/DogsList"
 import JokesPage from "./components/Content/JokesPage/JokesPage"

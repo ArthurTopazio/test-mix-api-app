@@ -10,11 +10,12 @@ const FooterElement = (props: any) => {
         <div className={style.item}>
           <div className={style.caption}>Creator</div>
           <ul className={style.list__items}>
-            <li>photo</li>
-            <li>contacts</li>
-            <li>socials</li>
+            <li><a href='form'>linkedIn</a></li>
+            <li><a href='form'>Facebook</a></li>
+            <li><a href='form'>Instagram</a></li>
+            <li><a href='form'>Phone</a></li>
+            <li><a href='form'>Mail</a></li>
           </ul>
-          <img src="https://cdn.dribbble.com/users/1577045/screenshots/4914645/media/028d394ffb00cb7a4b2ef9915a384fd9.png?compress=1&resize=400x300&vertical=top" alt="user_photo" />
         </div>
         <div className={style.item}>
           <div className={style.caption}>Resources</div>
