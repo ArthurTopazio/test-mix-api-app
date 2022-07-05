@@ -1,12 +1,11 @@
-import React from "react";
-import { withFormik } from "formik";
+import { withFormik } from "formik"
 import * as Yup from 'yup'
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import Button from "@mui/material/Button";
+import Card from "@mui/material/Card"
+import CardContent from "@mui/material/CardContent"
+import CardActions from "@mui/material/CardActions"
+import TextField from "@mui/material/TextField"
+import MenuItem from "@mui/material/MenuItem"
+import Button from "@mui/material/Button"
 
 
 const courseCategory = [
@@ -22,7 +21,7 @@ const courseCategory = [
     value: "computerScience",
     label: "Computer Science"
   }
-];
+]
 
 const form = props => {
   const {
@@ -37,7 +36,7 @@ const form = props => {
   } = props;
 
   return (
-    <div >
+    <div>
       <form onSubmit={handleSubmit}>
         <Card>
           <CardContent>
@@ -157,14 +156,21 @@ const Form = withFormik({
   },
 
   validationSchema: Yup.object().shape({
-    firstName: Yup.string().required("Required"),
-    lastName: Yup.string().required("Required"),
+    firstName: Yup.string()
+      .min(1, 'Too short!')
+      .max(15, 'Too long for name')
+      .required("Please enter Your name"),
+    lastName: Yup.string()
+      .min(1, 'too short!')
+      .max(15, 'Too long for surname')
+      .required("Required"),
     email: Yup.string()
       .email("Enter a valid email")
       .required("Email is required"),
-    course: Yup.string().required("Select your course category"),
+    course: Yup.string()
+      .required("Select your favorite course category"),
     password: Yup.string()
-      .min(8, "Password must contain at least 8 characters")
+      .min(3, "Password must contain at least 3 characters")
       .required("Enter your password"),
     confirmPassword: Yup.string()
       .required("Confirm your password")
@@ -181,3 +187,5 @@ const Form = withFormik({
 })(form);
 
 export default Form
+
+
