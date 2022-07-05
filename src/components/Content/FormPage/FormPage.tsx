@@ -4,7 +4,7 @@ import style from './FormPage.module.scss'
 
 const FormExample = () => (
   <div>
-    <h1>Test form (added by Formik/Yup/MUI)</h1>
+    <h1>Test form (added by Formik/Yup)</h1>
     <Form />
   </div>
 )
@@ -21,4 +21,4 @@ const FormPage = () => {
   )
 }
 
-export default FormPage
+export default FormPage;

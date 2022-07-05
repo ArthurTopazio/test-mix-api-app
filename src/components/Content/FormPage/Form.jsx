@@ -6,21 +6,26 @@ import CardActions from "@mui/material/CardActions"
 import TextField from "@mui/material/TextField"
 import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
+import Checkbox from '@mui/material/Checkbox'
 
 
 const courseCategory = [
   {
-    value: "webDevelopment",
-    label: "Web Development"
+    value: 'USD',
+    label: '$',
   },
   {
-    value: "networking",
-    label: "Networking"
+    value: 'EUR',
+    label: '€',
   },
   {
-    value: "computerScience",
-    label: "Computer Science"
-  }
+    value: 'BTC',
+    label: '฿',
+  },
+  {
+    value: 'JPY',
+    label: '¥',
+  },
 ]
 
 const form = props => {
@@ -40,6 +45,14 @@ const form = props => {
       <form onSubmit={handleSubmit}>
         <Card>
           <CardContent>
+            <Checkbox
+              id="check"
+              label="check test"
+              value="checkedA"
+              inputProps={{
+                'aria-label': 'Checkbox A',
+              }}
+            />
             <TextField
               id="firstName"
               label="First Name"
@@ -87,7 +100,11 @@ const form = props => {
               error={touched.course && Boolean(errors.course)}
               margin="dense"
               variant="outlined"
-              fullWidth
+              size="small"
+              sx={{
+                width: 500,
+                maxWidth: '50%',
+              }}
             >
               {courseCategory.map(option => (
                 <MenuItem key={option.value} value={option.value}>
@@ -138,20 +155,22 @@ const form = props => {
 
 const Form = withFormik({
   mapPropsToValues: ({
+    check,
     firstName,
     lastName,
     email,
     course,
     password,
-    confirmPassword
+    confirmPassword,
   }) => {
     return {
+      check: '',
       firstName: firstName || "",
       lastName: lastName || "",
       email: email || "",
       course: course || "",
       password: password || "",
-      confirmPassword: confirmPassword || ""
+      confirmPassword: confirmPassword || "",
     };
   },
 
