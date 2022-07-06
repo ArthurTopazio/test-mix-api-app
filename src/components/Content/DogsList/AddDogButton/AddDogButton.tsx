@@ -11,7 +11,11 @@ const AddDogButton = (props: any) => {
 
   return (
     <div className={style.dogs__card}>
-      <button className={style.add__dog} onClick={testClick}>add dog</button>
+      <button className={style.add__dog} onClick={testClick}>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOu5tV-7Ow1_6OsWVlTyeK6nVgkfq9BCxdYA&usqp=CAU" alt="add pict" />
+      </button>
+      <p>add random dog picture</p>
+      <input type="number" />
     </div>
   )
 }
