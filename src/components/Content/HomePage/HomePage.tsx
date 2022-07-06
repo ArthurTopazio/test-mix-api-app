@@ -12,7 +12,6 @@ import OtherInformation from './Other-information/OtherInformation'
 
 //HeaderImage add to props
 const HomePage = (props: any) => {
-  console.log('home page props:', props)
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {

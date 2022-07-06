@@ -16,6 +16,14 @@ let initialState = [
     button_name: 'read more',
     button_link: '/form',
   },
+  {
+    id: 3,
+    name: 'Dogs',
+    h1: 'Dogs are the bests friends',
+    text: `If You wanna help to our valanters, please go for donate`,
+    button_name: 'DONATE',
+    button_link: '/form',
+  },
 ]
 
 const bannerReducer = (state = initialState, action: any) => {

@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom"
 import style from './Footer.module.scss'
 
 const FooterElement = (props: any) => {
-  console.log(props)
   return (
     <div className={!props.style ? style.wrapper : style.wrapperAlt} >
       <div className={style.box}>
@@ -50,7 +49,7 @@ const Footer = () => {
       <Route path="/form"
         element={<FooterElement style={true} />} />
       <Route path="/dogs"
-        element={<FooterElement style={true} />} />
+        element={<FooterElement style={false} />} />
       <Route path="/jokes"
         element={<FooterElement style={true} />} />
     </Routes>

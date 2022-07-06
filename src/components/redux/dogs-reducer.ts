@@ -1,7 +1,8 @@
 import { dogsAPI } from './../../api/api'
 
 let initialState = {
-  dogs_pictures: ['https://images.dog.ceo/breeds/bluetick/n02088632_2364.jpg',],
+  main_wallpaper: 'https://s1.1zoom.me/big3/61/421295-Kycb.jpg',
+  dogs_pictures: [],
 }
 
 const SET_DOGS = 'SET_DOGS'

@@ -1,11 +1,8 @@
 import axios from 'axios'
 
+//dogs-page
 const dogsInstance = axios.create({
   baseURL: 'https://dog.ceo/api/',
-})
-
-const jokeInstance = axios.create({
-  baseURL: 'https://v2.jokeapi.dev/joke/',
 })
 
 export const dogsAPI = {
@@ -14,6 +11,11 @@ export const dogsAPI = {
       .then(response => { return response.data });
   },
 }
+
+// Jokes-page
+const jokeInstance = axios.create({
+  baseURL: 'https://v2.jokeapi.dev/joke/',
+})
 
 export const jokesAPI = {
   getJokes() {
