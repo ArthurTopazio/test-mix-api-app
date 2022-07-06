@@ -1,13 +1,10 @@
 import { withFormik } from "formik"
 import * as Yup from 'yup'
-import Card from "@mui/material/Card"
-import CardContent from "@mui/material/CardContent"
-import CardActions from "@mui/material/CardActions"
 import TextField from "@mui/material/TextField"
 import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
-import Checkbox from '@mui/material/Checkbox'
 
+//need to test check-box&radio
 
 const courseCategory = [
   {
@@ -43,123 +40,149 @@ const form = props => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Card>
-          <CardContent>
-            <Checkbox
-              id="check"
-              label="check test"
-              value="checkedA"
-              inputProps={{
-                'aria-label': 'Checkbox A',
-              }}
-            />
-            <div>
-              <TextField
-                id="firstName"
-                label="First Name"
-                value={values.firstName}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                helperText={touched.firstName ? errors.firstName : ""}
-                error={touched.firstName && Boolean(errors.firstName)}
-                margin="dense"
-                variant="outlined"
-                sx={{
-                  width: '45%',
-                  bgcolor: {
-                    xs: 'primary.main',
-                    sm: 'yellow',
-                    md: 'green',
-                    lg: 'secondary.main',
-                    xl: 'black',
-                  }
-                }}
-              />
-              <TextField
-                id="lastName"
-                label="Last Name"
-                value={values.lastName}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                helperText={touched.lastName ? errors.lastName : ""}
-                error={touched.lastName && Boolean(errors.lastName)}
-                margin="dense"
-                variant="outlined"
-              />
-            </div>
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.email ? errors.email : ""}
-              error={touched.email && Boolean(errors.email)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              select
-              id="course"
-              label="Course Category"
-              value={values.course}
-              onChange={handleChange("course")}
-              helperText={touched.course ? errors.course : ""}
-              error={touched.course && Boolean(errors.course)}
-              margin="dense"
-              variant="outlined"
-              size="small"
-              sx={{
-                width: 500,
-                maxWidth: '50%',
-              }}
-            >
-              {courseCategory.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-            <TextField
-              id="password"
-              label="Password"
-              type="password"
-              value={values.password}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.password ? errors.password : ""}
-              error={touched.password && Boolean(errors.password)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="confirmPassword"
-              label="Confirm Password"
-              type="password"
-              value={values.confirmPassword}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.confirmPassword ? errors.confirmPassword : ""}
-              error={touched.confirmPassword && Boolean(errors.confirmPassword)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-          </CardContent>
-          <CardActions>
-            <Button type="submit" color="primary" disabled={isSubmitting}>
-              SUBMIT
-            </Button>
-            <Button color="secondary" onClick={handleReset}>
-              CLEAR
-            </Button>
-          </CardActions>
-        </Card>
+        <div>
+          <TextField
+            id="firstName"
+            label="First Name"
+            value={values.firstName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.firstName ? errors.firstName : ""}
+            error={touched.firstName && Boolean(errors.firstName)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          />
+          <TextField
+            id="lastName"
+            label="Last Name"
+            value={values.lastName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.lastName ? errors.lastName : ""}
+            error={touched.lastName && Boolean(errors.lastName)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          />
+        </div>
+        <div>
+          <TextField
+            id="email"
+            label="Email"
+            type="email"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.email ? errors.email : ""}
+            error={touched.email && Boolean(errors.email)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          />
+          <TextField
+            select
+            id="course"
+            label="Course Category"
+            value={values.course}
+            onChange={handleChange("course")}
+            helperText={touched.course ? errors.course : ""}
+            error={touched.course && Boolean(errors.course)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          >
+            {courseCategory.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </div>
+        <div>
+          <TextField
+            id="password"
+            label="Password"
+            type="password"
+            value={values.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.password ? errors.password : ""}
+            error={touched.password && Boolean(errors.password)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          />
+          <TextField
+            id="confirmPassword"
+            label="Confirm Password"
+            type="password"
+            value={values.confirmPassword}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            helperText={touched.confirmPassword ? errors.confirmPassword : ""}
+            error={touched.confirmPassword && Boolean(errors.confirmPassword)}
+            margin="dense"
+            variant="outlined"
+            sx={{
+              width: {
+                xs: '100%',
+                sm: '90%',
+                md: '45%',
+                lg: '45%',
+                xl: '45%',
+              }
+            }}
+          />
+        </div>
+        <Button type="submit" color="primary" disabled={isSubmitting}>
+          SUBMIT
+        </Button>
+        <Button color="secondary" onClick={handleReset}>
+          CLEAR
+        </Button>
       </form>
-    </div>
+    </div >
   );
 };
 
@@ -174,7 +197,7 @@ const Form = withFormik({
     confirmPassword,
   }) => {
     return {
-      check: '',
+      check: false,
       firstName: firstName || "",
       lastName: lastName || "",
       email: email || "",
