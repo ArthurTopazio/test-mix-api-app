@@ -7,8 +7,10 @@ import Button from '@mui/material/Button'
 import MenuMui from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import style from './Header.module.scss'
-import type { MenuProps } from 'antd';
-import { Menu } from 'antd';
+import type { MenuProps } from 'antd'
+import { Menu } from 'antd'
+import burger from './../../assets/images/burger-menu-pack/burger.png'
+import x from './../../assets/images/burger-menu-pack/x.png'
 
 
 // MUI menu component(button+list)
@@ -124,6 +126,8 @@ export const Burg: React.FC = () => {
 
 const Header = () => {
   let links = { name: 'All News', to: '/news' }
+
+
   return <div className={style.header}>
     <div className={style.wrapper}>
       <div className={style.logo}>
@@ -142,7 +146,7 @@ const Header = () => {
       </ul>
 
       <div className={style.burger__menu}>
-        Burger menu
+        <img src={burger} alt='Burger menu' />
       </div>
     </div>
   </div>

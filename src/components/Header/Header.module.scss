@@ -59,9 +59,13 @@ a {
 }
 
 .burger__menu {
-  margin: 16px;
+  margin: 6px;
   display: none;
   @media (max-width: $mediumBP) {
     display: flex;
   }
+}
+
+.burger__menu img {
+  width: 40px
 }
