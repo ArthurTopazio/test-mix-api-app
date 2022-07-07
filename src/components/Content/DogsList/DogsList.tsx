@@ -6,7 +6,7 @@ import AddDogButton from './AddDogButton/AddDogButton'
 import style from './DogsList.module.scss'
 
 const DogsList = (props: any) => {
-  console.log(props)
+  console.log('dogs list', props.dogs)
 
   let elements = props.dogs.dogs_pictures.map((item: any) => <div className={style.dogs__card}>
     <img src={item} alt="dogs_picture" />
@@ -18,7 +18,7 @@ const DogsList = (props: any) => {
       <div className={style.content}>
         <h2>dogs list</h2>
         <div className={style.dogs__cards}>
-          <AddDogButton getDogs={props.getDogs} />
+          <AddDogButton getDogs={props.getDogs} isFetching={props.dogs.isFetching} />
           {elements}
         </div>
       </div>
