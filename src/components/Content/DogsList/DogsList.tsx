@@ -6,6 +6,7 @@ import AddDogButton from './AddDogButton/AddDogButton'
 import style from './DogsList.module.scss'
 
 const DogsList = (props: any) => {
+  console.log(props)
 
   let elements = props.dogs.dogs_pictures.map((item: any) => <div className={style.dogs__card}>
     <img src={item} alt="dogs_picture" />

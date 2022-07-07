@@ -25,7 +25,7 @@ export const setDogs = (newDogs: any) => ({ type: SET_DOGS, newDogs })
 export const getDogs = (quantity: number = 1) => {
   return (dispatch: any) => {
     dogsAPI.getRandomDogs(quantity).then((data: any) => {
-      dispatch(setDogs(data.message[0]));
+      data.message.map((item: any) => dispatch(setDogs(item)));
     });
   }
 };
