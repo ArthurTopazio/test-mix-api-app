@@ -21,7 +21,7 @@
 }
 
 .logo {
- margin-left: 16px;
+  margin-left: 16px;
 }
 
 .logo img {
@@ -67,5 +67,30 @@ a {
 }
 
 .burger__menu img {
-  width: 40px
+  width: 40px;
+  transition: 0.3s;
+}
+
+.burger__menu_bg:hover {
+  background-color: rgb(135, 137, 255);
+  border-radius: 15px;
+}
+
+.burger__menu_x:hover {
+  background-color: rgb(255, 84, 84);
+  border-radius: 15px;
+}
+
+.burger__menu_items {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  min-height: 80vh;
+  background-color: $bgColor;
+  z-index: 50;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
