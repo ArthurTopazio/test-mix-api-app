@@ -52,6 +52,8 @@ const Footer = () => {
         element={<FooterElement style={false} />} />
       <Route path="/jokes"
         element={<FooterElement style={true} />} />
+      <Route path="/social_network"
+        element={<FooterElement style={true} />} />
     </Routes>
   )
 }

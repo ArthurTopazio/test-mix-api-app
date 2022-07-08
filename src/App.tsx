@@ -9,6 +9,7 @@ import HeaderBannerRoutes from './components/Header/HeaderBanerRoutes/HeaderBann
 import FormPage from './components/Content/FormPage/FormPage'
 import DogsList from "./components/Content/DogsList/DogsList"
 import JokesPage from "./components/Content/JokesPage/JokesPage"
+import SocialNetwork from "./components/Content/SocialNetwork/SocialNetwork"
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           element={<DogsList />} />
         <Route path="/jokes"
           element={<JokesPage />} />
+        <Route path="/social_network"
+          element={<SocialNetwork />} />
       </Routes>
       <Footer />
     </div>

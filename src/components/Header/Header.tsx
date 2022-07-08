@@ -33,7 +33,7 @@ const Header = () => {
         <NavLink to={''}
         >Home</NavLink>
       </ul>
-      {!burg ? <div className={style.burger__menu_items}>
+      {burg ? <div className={style.burger__menu_items}>
 
         <NavLink onClick={actionBurg} to={'/news'}
         >News</NavLink>
@@ -47,7 +47,7 @@ const Header = () => {
         >Home</NavLink>
       </div> : null}
       <div className={style.burger__menu} onClick={actionBurg}>
-        {burg ? <img className={style.burger__menu_bg} src={burger} alt='Burger menu' />
+        {!burg ? <img className={style.burger__menu_bg} src={burger} alt='Burger menu' />
           : <img className={style.burger__menu_x} src={x} alt='close menu' />}
       </div>
     </div>
