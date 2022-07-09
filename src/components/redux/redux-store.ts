@@ -6,6 +6,7 @@ import homeReducer from "./home-reducer"
 import dogsReducer from "./dogs-reducer"
 import jokesReducer from "./jokes-reducer"
 import authReducer from "./auth-reducer"
+import profileReducer from "./profile-reducer"
 
 let reducers = combineReducers({
   banner: bannerReducer,
@@ -13,6 +14,7 @@ let reducers = combineReducers({
   dogs: dogsReducer,
   jokes: jokesReducer,
   auth: authReducer,
+  profile: profileReducer,
 });
 
 let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware))
