@@ -28,6 +28,8 @@ const Header = () => {
         >Form</NavLink>
         <NavLink to={'/dogs'}
         >Dogs</NavLink>
+        <NavLink to={'/social_network'}
+        >Social Network</NavLink>
         <NavLink to={'/jokes'}
         >Jokes</NavLink>
         <NavLink to={''}
@@ -37,6 +39,8 @@ const Header = () => {
 
         <NavLink onClick={actionBurg} to={'/news'}
         >News</NavLink>
+        <NavLink onClick={actionBurg} to={'/social_network'}
+        >Social Network</NavLink>
         <NavLink onClick={actionBurg} to={'/form'}
         >Form</NavLink>
         <NavLink onClick={actionBurg} to={'/dogs'}

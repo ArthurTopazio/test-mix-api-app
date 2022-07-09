@@ -27,7 +27,7 @@ function App() {
           element={<DogsList />} />
         <Route path="/jokes"
           element={<JokesPage />} />
-        <Route path="/social_network"
+        <Route path="/social_network/*"
           element={<SocialNetwork />} />
       </Routes>
       <Footer />
