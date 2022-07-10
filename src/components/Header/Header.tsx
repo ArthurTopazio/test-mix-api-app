@@ -32,6 +32,8 @@ const Header = () => {
         >Social Network</NavLink>
         <NavLink to={'/jokes'}
         >Jokes</NavLink>
+        <NavLink to={'/test'}
+        >Test</NavLink>
         <NavLink to={''}
         >Home</NavLink>
       </ul>

@@ -10,6 +10,7 @@ import FormPage from './components/Content/FormPage/FormPage'
 import DogsList from "./components/Content/DogsList/DogsList"
 import JokesPage from "./components/Content/JokesPage/JokesPage"
 import SocialNetwork from "./components/Content/SocialNetwork/SocialNetwork"
+import TestList from "./components/Content/TestList/TestList"
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           element={<JokesPage />} />
         <Route path="/social_network/*"
           element={<SocialNetwork />} />
+        <Route path="/test"
+          element={<TestList />} />
       </Routes>
       <Footer />
     </div>

@@ -5,6 +5,9 @@ import { withAuthRedirect } from './../HOC/withAuthRedirect'
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import { compose } from "redux"
 
+import style from './SNProfile.module.scss'
+import SNUsers from "../SNUsers/SNUsers"
+
 function withRouter(Component: any) {
 
   function ComponentWithRouterProp(props: any) {
@@ -23,10 +26,15 @@ function withRouter(Component: any) {
 }
 
 const SNProfile = (props: any) => {
-  console.log(props)
-  props.getStatus(24386)
+  console.log('profile props', props)
+  // props.getStatus(24386)
+  //props.getUserProfile(24386)
   return (
-    <div>Profile</div>
+    <div className={style.wrapper}>
+      <h3>Profile</h3>
+      <p>photo/aboutMe/contacts/fullNAme/status</p>
+      <SNUsers />
+    </div>
   )
 }
 
