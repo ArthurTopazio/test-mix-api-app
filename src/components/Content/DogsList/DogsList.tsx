@@ -8,7 +8,7 @@ import style from './DogsList.module.scss'
 const DogsList = (props: any) => {
 
   let elements = props.dogs.dogs_pictures.map((item: any) => <div className={style.dogs__card}>
-    <img src={item} alt="dogs_picture" />
+    <img src={item} alt="dogs_picture" loading="lazy" />
   </div>)
 
   return (
