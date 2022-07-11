@@ -1,33 +1,31 @@
 import style from './TestList.module.scss'
-import Button from '@mui/material/Button';
 import * as React from 'react';
-import Switch from '@mui/material/Switch';
-import TextField from '@mui/material/TextField';
-import Divider from '@mui/material/Divider';
-import AccessibilityNewOutlinedIcon from '@mui/icons-material/AccessibilityNewOutlined';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+import Button from '@mui/material/Button';
 
 const TestList = (props: any) => {
-  const [area, setArea] = React.useState('');
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setArea(event.target.value);
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  }
+  const handleToggle = () => {
+    setOpen(!open);
   };
-
   return (
     <div className={style.content__wrapper}>
-
       <div className={style.content}>
         <div className={style.text}>Test area</div>
-        <div>
-          <TextField id="outlined-basic" label="Outlined" onChange={handleChange} variant="outlined" />
-          <Divider light />
-          <TextField id="filled-basic" label="Filled" variant="filled" />
-          <Divider />
-          <TextField id="standard-basic" label="Standard" variant="standard" />
-        </div>
-        <p>{area}<AccessibilityNewOutlinedIcon /></p>
-      </div>
+        <Button onClick={handleToggle}>Show backdrop</Button>
+        <Backdrop
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={open}
 
+        >
+          <div onClick={handleClose}>Hello</div>
+        </Backdrop>
+
+      </div>
     </div >
   )
 }
