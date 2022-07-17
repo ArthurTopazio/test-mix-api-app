@@ -32,6 +32,7 @@
   width: 22%;
   height: 200px;
   margin-bottom: 15px;
+  box-shadow: 1px 1px 5px black;
   @media (max-width: $largeBP) {
     height: 180px;
   }

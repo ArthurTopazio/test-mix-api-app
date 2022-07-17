@@ -19,7 +19,10 @@
 }
 
 .dogs__card p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
   margin: 7px auto;
+
   @media (max-width: $largeBP) {
     margin: 0 auto;
   }
@@ -28,67 +31,22 @@
   }
 }
 
-.dogs__card input {
-  width: 30%;
-}
-
 .add__dog {
   margin-top: 15px;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   border: none;
-  transition: 0.3s;
-
-  @media (max-width: $mediumBP) {
-  width: 80px;
-  height: 80px;
-  }
-  @media (max-width: $smallBP) {
-  width: 70px;
-  height: 70px;
-  }
+  box-shadow: none;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .add__dog:hover {
-  width: 104px;
-  height: 104px;
-  box-shadow: 2px 2px 5px black;
- 
-  @media (max-width: $mediumBP) {
-    width: 84px;
-    height: 84px;
-  }
-  @media (max-width: $smallBP) {
-    width: 74px;
-    height: 74px;
-  }
-  
+  box-shadow: 2px 2px 8px gray
 }
 
 .add__dog:active {
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 0.5px 0.5px 3px black
 }
-
-
-.add__dog img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-.preloader {
-  margin-top: 15px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: none;
-  
-  @media (max-width: $mediumBP) {
-  width: 80px;
-  height: 80px;
-  }
-  @media (max-width: $smallBP) {
-  width: 70px;
-  height: 70px;
-  }
-}
+ 
