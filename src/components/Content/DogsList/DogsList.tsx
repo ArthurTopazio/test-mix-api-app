@@ -7,9 +7,14 @@ import AddDogButton from './AddDogButton/AddDogButton'
 import style from './DogsList.module.scss'
 
 const DogsList = (props: any) => {
+  function imgLoaded(img: any) {
+    //var $img = $(img);
+    console.log(img)
+    //$img.parent().addClass('loaded');
+  };
 
   let elements = props.dogs.dogs_pictures.map((item: any) => <div key={item} className={style.dogs__card}>
-    <img src={item} alt="dogs_picture" loading="lazy" />
+    <img src={item} alt="dogs_picture" loading="eager" />
   </div>)
 
   let skeletonElements: any = []
