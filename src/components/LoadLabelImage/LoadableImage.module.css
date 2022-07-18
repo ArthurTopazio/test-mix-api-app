@@ -1,0 +1,10 @@
+
+.image {
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity .5s ease-in-out;
+}
+
+.imageLoaded {
+  opacity: 1;
+}

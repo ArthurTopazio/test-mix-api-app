@@ -1,20 +1,27 @@
 import { connect } from 'react-redux'
 import { setDogs, getDogs } from '../../redux/dogs-reducer'
+import * as React from 'react'
 
 import HeaderWall from '../../Header/HeaderWall/HeaderWall'
 import Skeleton from '@mui/material/Skeleton'
 import AddDogButton from './AddDogButton/AddDogButton'
 import style from './DogsList.module.scss'
+import LoadableImage from '../../LoadLabelImage/LoadableImage'
+import Box from '@mui/material/Box'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
 
 const DogsList = (props: any) => {
-  function imgLoaded(img: any) {
-    //var $img = $(img);
-    console.log(img)
-    //$img.parent().addClass('loaded');
-  };
+
+  const [value, setValue] = React.useState(1)
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+    console.log(newValue);
+  }
 
   let elements = props.dogs.dogs_pictures.map((item: any) => <div key={item} className={style.dogs__card}>
-    <img src={item} alt="dogs_picture" loading="eager" />
+    <LoadableImage src={item} />
   </div>)
 
   let skeletonElements: any = []
@@ -35,7 +42,14 @@ const DogsList = (props: any) => {
     <div className={style.content__wrapper}>
       <HeaderWall headerImg={props.dogs.main_wallpaper} />
       <div className={style.content}>
-        <h2>dogs list</h2>
+        <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
+          <Tabs value={value} onChange={handleChange} centered>
+            <Tab sx={{ width: '25%' }} label="List all breeds" />
+            <Tab sx={{ width: '25%' }} label="Random image" />
+            <Tab sx={{ width: '25%' }} label="By breed" />
+            <Tab sx={{ width: '25%' }} label="By sub-breed" />
+          </Tabs>
+        </Box>
         <div className={style.dogs__cards}>
           <AddDogButton getDogs={props.getDogs} isFetching={props.dogs.isFetching} />
           {elements}

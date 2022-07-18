@@ -31,3 +31,17 @@
   text-align: center;
   margin: auto;
 }
+
+
+.image {
+  opacity: 0;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  transition: .7s ease-in-out;
+}
+
+.imageLoaded {
+  width: 35%;
+  opacity: 1;
+}
