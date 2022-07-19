@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import News from './components/Content/News/News'
 import HeaderBannerRoutes from './components/Header/HeaderBanerRoutes/HeaderBannerRoutes'
 import FormPage from './components/Content/FormPage/FormPage'
-import DogsList from "./components/Content/DogsList/DogsList"
+import DogsPage from "./components/Content/DogsPage/DogsPage"
 import JokesPage from "./components/Content/JokesPage/JokesPage"
 import SocialNetwork from "./components/Content/SocialNetwork/SocialNetwork"
 import TestList from "./components/Content/TestList/TestList"
@@ -25,7 +25,7 @@ function App() {
         <Route path="/form"
           element={<FormPage />} />
         <Route path="/dogs"
-          element={<DogsList />} />
+          element={<DogsPage />} />
         <Route path="/jokes"
           element={<JokesPage />} />
         <Route path="/social_network/*"

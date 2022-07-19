@@ -10,6 +10,11 @@ export const dogsAPI = {
     return dogsInstance.get(`breeds/image/random/${quantity}`)
       .then(response => { return response.data });
   },
+
+  getAllBreedsList() {
+    return dogsInstance.get(`breeds/list/all`)
+      .then(response => { return response.data });
+  }
 }
 
 // Jokes-page

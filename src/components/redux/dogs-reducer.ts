@@ -5,11 +5,13 @@ let initialState = {
   dogs_pictures: [],
   isFetching: false,
   fetchQuant: 0,
+  allBreedsList: null,
 }
 
 const SET_DOGS = 'SET_DOGS'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 const SET_FETCH_QUANT = 'SET_FETCH_QUANT'
+const SET_ALL_BREEDS_LIST = 'SET_ALL_BREEDS_LIST'
 
 const dogsReducer = (state = initialState, action: any) => {
   switch (action.type) {
@@ -33,6 +35,13 @@ const dogsReducer = (state = initialState, action: any) => {
         fetchQuant: action.fetchQuant,
       }
     }
+
+    case SET_ALL_BREEDS_LIST: {
+      return {
+        ...state,
+        allBreedsList: action.breedsList,
+      }
+    }
     default:
       return state
   }
@@ -46,6 +55,16 @@ export const setDogs = (newDogs: any) => ({ type: SET_DOGS, newDogs })
 
 export const setFetchQuant = (fetchQuant: number) => ({ type: SET_FETCH_QUANT, fetchQuant })
 
+export const setDogsBreedsList = (breedsList: any) => ({ type: SET_ALL_BREEDS_LIST, breedsList })
+
+export const getDogsBreedsList = () => {
+  return (dispatch: any) => {
+    dogsAPI.getAllBreedsList().then((data: any) => {
+      dispatch(setDogsBreedsList(data.message))
+    })
+  }
+}
+
 export const getDogs = (quantity: number = 1) => {
   return (dispatch: any) => {
     dispatch(toggleIsFetching(true))
@@ -56,9 +75,5 @@ export const getDogs = (quantity: number = 1) => {
     })
   }
 }
-
-
-
-
 
 export default dogsReducer

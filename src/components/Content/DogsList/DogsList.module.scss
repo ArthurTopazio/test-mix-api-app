@@ -1,23 +1,5 @@
-@import './../../../assets/scss/variables.scss';
-@import './../../../assets/scss/mixins.scss';
-
-.content__wrapper {
-  @include contentWrapper;
-}
-
-.content {
-  @include content;
-
-
- // @include flex(row, space-between, center, wrap);
-  
-  @media (max-width: $largeBP) {
-  }
-  @media (max-width: $mediumBP) {
-  }
-  @media (max-width: $smallBP) {
-  }
-}
+@import "./../../../assets/scss/variables.scss";
+@import "./../../../assets/scss/mixins.scss";
 
 .dogs__cards {
   padding: 15px;
@@ -46,10 +28,8 @@
 
 .dogs__card img {
   margin: auto;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-
-
