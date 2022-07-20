@@ -6,12 +6,14 @@ let initialState = {
   isFetching: false,
   fetchQuant: 0,
   allBreedsList: null,
+  breedPicture: null,
 }
 
 const SET_DOGS = 'SET_DOGS'
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 const SET_FETCH_QUANT = 'SET_FETCH_QUANT'
 const SET_ALL_BREEDS_LIST = 'SET_ALL_BREEDS_LIST'
+const SET_BREED_PICTURE = 'SET_BREED_PICTURE'
 
 const dogsReducer = (state = initialState, action: any) => {
   switch (action.type) {
@@ -42,6 +44,14 @@ const dogsReducer = (state = initialState, action: any) => {
         allBreedsList: action.breedsList,
       }
     }
+
+    case SET_BREED_PICTURE: {
+      return {
+        ...state,
+        breedPicture: action.breedPicture,
+      }
+    }
+
     default:
       return state
   }
@@ -49,6 +59,10 @@ const dogsReducer = (state = initialState, action: any) => {
 
 export const toggleIsFetching = (isFetching: boolean) => ({
   type: TOGGLE_IS_FETCHING, isFetching
+})
+
+export const setBreedPicture = (breedPicture: string) => ({
+  type: SET_BREED_PICTURE, breedPicture
 })
 
 export const setDogs = (newDogs: any) => ({ type: SET_DOGS, newDogs })
@@ -72,6 +86,15 @@ export const getDogs = (quantity: number = 1) => {
     dogsAPI.getRandomDogs(quantity).then((data: any) => {
       dispatch(toggleIsFetching(false))
       data.message.map((item: any) => dispatch(setDogs(item)));
+    })
+  }
+}
+
+export const getBreedPicture = (name: string) => {
+  return (dispatch: any) => {
+    dogsAPI.getBreedPicture(name).then((data: any) => {
+      dispatch(setBreedPicture(data['message']));
+      debugger
     })
   }
 }

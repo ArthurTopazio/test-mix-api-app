@@ -1,3 +1,4 @@
+import { getBreedPicture } from './../components/redux/dogs-reducer';
 import axios from 'axios'
 
 //dogs-page
@@ -13,6 +14,11 @@ export const dogsAPI = {
 
   getAllBreedsList() {
     return dogsInstance.get(`breeds/list/all`)
+      .then(response => { return response.data });
+  },
+
+  getBreedPicture(name: string) {
+    return dogsInstance.get(`breed/${name}/images/random`)
       .then(response => { return response.data });
   }
 }
