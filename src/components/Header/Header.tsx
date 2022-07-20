@@ -19,7 +19,9 @@ const Header = () => {
   return <div className={style.header}>
     <div className={style.wrapper}>
       <div className={style.logo}>
-        <img src="https://images.vexels.com/media/users/3/136252/isolated/preview/9ba1b6a847b1d5c7f006d872b0916101-internet-connection-devices.png" alt="" />
+        <NavLink to={''}
+        ><img src="https://images.vexels.com/media/users/3/136252/isolated/preview/9ba1b6a847b1d5c7f006d872b0916101-internet-connection-devices.png" alt="" />
+        </NavLink>
       </div>
       <ul className={style.nav}>
         <NavLink to={'/news'}
@@ -37,7 +39,7 @@ const Header = () => {
         <NavLink to={''}
         >Home</NavLink>
       </ul>
-      {burg ? <div className={style.burger__menu_items}>
+      <div className={`${style.burger__menu_items} ${burg ? style.burger__menu_acive : null}`}>
 
         <NavLink onClick={actionBurg} to={'/news'}
         >News</NavLink>
@@ -51,7 +53,7 @@ const Header = () => {
         >Jokes</NavLink>
         <NavLink onClick={actionBurg} to={''}
         >Home</NavLink>
-      </div> : null}
+      </div>
       <div className={style.burger__menu} onClick={actionBurg}>
         {!burg ? <img className={style.burger__menu_bg} src={burger} alt='Burger menu' />
           : <img className={style.burger__menu_x} src={x} alt='close menu' />}

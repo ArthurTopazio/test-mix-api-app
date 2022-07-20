@@ -22,6 +22,13 @@
 
 .logo {
   margin-left: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  background-color: rgb(160, 163, 255)
 }
 
 .logo img {
@@ -82,10 +89,11 @@ a {
 }
 
 .burger__menu_items {
+  visibility: hidden;
   position: absolute;
-  top: 90px;
+  top: 52px;
   width: 100%;
-  min-height: 80vh;
+  height: 0px;
   background-color: $bgColor;
   z-index: 50;
   border-radius: 15px;
@@ -93,5 +101,13 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  
+  transition: 0.5s ease-in-out;
+}
+
+.burger__menu_acive {
+  visibility: visible;
+  height: 90vh;
+  @media (min-width: $mediumBP) {
+    visibility: hidden;
+  }
 }
