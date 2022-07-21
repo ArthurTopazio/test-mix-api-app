@@ -11,6 +11,7 @@ import DogsAllBreeds from '../DogsAllBreeds/DogsAllBreeds'
 
 const DogsPage = (props: any) => {
   const [value, setValue] = React.useState(1)
+  console.warn('Need to update for all breeds layout & sub-breed get resp')
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);

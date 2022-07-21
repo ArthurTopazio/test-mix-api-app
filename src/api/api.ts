@@ -1,4 +1,3 @@
-import { getBreedPicture } from './../components/redux/dogs-reducer';
 import axios from 'axios'
 
 //dogs-page
@@ -97,6 +96,7 @@ export const profileAPI = {
   },
 }
 
+console.warn('need refactoring in api.ts')
 
 //category: string = 'Any', lang?: string, blacklistFlags?: string,
 //type = 'single', contains?: string, amount?: number

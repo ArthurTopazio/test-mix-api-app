@@ -4,7 +4,7 @@ import style from './News.module.scss'
 import HeaderWall from '../../Header/HeaderWall/HeaderWall'
 
 const News = (props: any) => {
-
+  console.warn('use NY-times API for news-page')
   return (
     <div className={style.content__wrapper}>
       <HeaderWall headerImg={props.news.main_wallpaper} />

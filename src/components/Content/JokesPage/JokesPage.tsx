@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getJokes } from '../../redux/jokes-reducer'
 
 const JokesPage = (props: any) => {
-  console.log('Jokes props:', props)
+  console.warn('Jokes page updates')
   let addJoke = () => {
     props.getJokes()
   }
