@@ -6,7 +6,6 @@ function OtherInformation(props: any) {
     card_name={item.card_name} card_logo={item.card_logo} items={item.items} />)
   return (
     <div className={style.wrapper}>
-      <h2 className={style.topic}>{props.other_information.name}</h2>
       <div className={style.cards__box}>
         {elements}
       </div>

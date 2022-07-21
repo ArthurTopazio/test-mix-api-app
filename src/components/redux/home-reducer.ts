@@ -6,7 +6,7 @@ let initialState = {
       {
         id: 1,
         card_name: 'HTML/CSS',
-        card_logo: 'https://www.seekpng.com/png/full/222-2229726_intro-to-html-css-html-css-icon.png',
+        card_logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png',
         items: ['adaptive layout', 'manual style settings', 'CSS basic animation']
       },
       {

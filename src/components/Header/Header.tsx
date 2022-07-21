@@ -5,8 +5,14 @@ import { useState } from 'react';
 import style from './Header.module.scss'
 import burger from './../../assets/images/burger-menu-pack/burger.png'
 import x from './../../assets/images/burger-menu-pack/x.png'
-
-//main header component
+import HomeIcon from '@mui/icons-material/Home'
+import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt'
+import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied'
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
+import PetsIcon from '@mui/icons-material/Pets'
+import ListAltIcon from '@mui/icons-material/ListAlt'
+import NewspaperIcon from '@mui/icons-material/Newspaper'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 const Header = () => {
 
@@ -25,34 +31,36 @@ const Header = () => {
       </div>
       <ul className={style.nav}>
         <NavLink to={'/news'}
-        >News</NavLink>
+        ><NewspaperIcon fontSize='small' /> News <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={'/form'}
-        >Form</NavLink>
+        ><ListAltIcon fontSize='small' /> Form <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={'/dogs'}
-        >Dogs</NavLink>
+        ><PetsIcon fontSize='small' />Dogs <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={'/social_network'}
-        >Social Network</NavLink>
+        ><ConnectWithoutContactIcon fontSize='small' />Social Network <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={'/jokes'}
-        >Jokes</NavLink>
+        ><SentimentVerySatisfiedIcon fontSize='small' />Jokes <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={'/test'}
-        >Test</NavLink>
+        ><AppSettingsAltIcon fontSize='small' /> Test <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink to={''}
-        >Home</NavLink>
+        ><HomeIcon fontSize='small' />Home <ExpandMoreIcon fontSize='small' /></NavLink>
       </ul>
       <div className={`${style.burger__menu_items} ${burg ? style.burger__menu_acive : null}`}>
 
         <NavLink onClick={actionBurg} to={'/news'}
-        >News</NavLink>
+        ><NewspaperIcon fontSize='small' /> News <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink onClick={actionBurg} to={'/social_network'}
-        >Social Network</NavLink>
+        ><ConnectWithoutContactIcon fontSize='small' />Social Network <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink onClick={actionBurg} to={'/form'}
-        >Form</NavLink>
+        ><ListAltIcon fontSize='small' /> Form <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink onClick={actionBurg} to={'/dogs'}
-        >Dogs</NavLink>
+        ><PetsIcon fontSize='small' />Dogs <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink onClick={actionBurg} to={'/jokes'}
-        >Jokes</NavLink>
+        ><SentimentVerySatisfiedIcon fontSize='small' />Jokes <ExpandMoreIcon fontSize='small' /></NavLink>
+        <NavLink to={'/test'}
+        ><AppSettingsAltIcon fontSize='small' /> Test <ExpandMoreIcon fontSize='small' /></NavLink>
         <NavLink onClick={actionBurg} to={''}
-        >Home</NavLink>
+        ><HomeIcon fontSize='small' />Home <ExpandMoreIcon fontSize='small' /></NavLink>
       </div>
       <div className={style.burger__menu} onClick={actionBurg}>
         {!burg ? <img className={style.burger__menu_bg} src={burger} alt='Burger menu' />

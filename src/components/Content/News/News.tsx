@@ -1,11 +1,13 @@
+import { connect } from 'react-redux'
+
 import style from './News.module.scss'
-import headerImg from '../../../assets/images/header-photos/winter_space.jpg'
 import HeaderWall from '../../Header/HeaderWall/HeaderWall'
 
-const News = () => {
+const News = (props: any) => {
+
   return (
     <div className={style.content__wrapper}>
-      <HeaderWall headerImg={headerImg} />
+      <HeaderWall headerImg={props.news.main_wallpaper} />
       <div className={style.content}>
         <div>NEWS</div>
         <div>text color test</div>
@@ -15,4 +17,8 @@ const News = () => {
   )
 }
 
-export default News;
+let mapStateToProps = (state: any) => ({
+  news: state.news
+})
+
+export default connect(mapStateToProps)(News)

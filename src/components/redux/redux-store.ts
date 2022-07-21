@@ -8,9 +8,11 @@ import jokesReducer from "./jokes-reducer"
 import authReducer from "./auth-reducer"
 import profileReducer from "./profile-reducer"
 import usersReducer from "./users-reducer"
+import newsReducer from './news-reducer'
 
 
 let reducers = combineReducers({
+  news: newsReducer,
   banner: bannerReducer,
   home: homeReducer,
   dogs: dogsReducer,

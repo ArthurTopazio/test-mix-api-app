@@ -56,6 +56,11 @@
   line-height: 0px;
 }
 
+.nav a {
+  display: flex;
+  align-items: center;
+}
+
 a {
   opacity: 1;
   background: transparent;
@@ -102,6 +107,11 @@ a {
   align-items: center;
   justify-content: space-around;
   transition: 0.5s ease-in-out;
+}
+
+.burger__menu_items a {
+  display: flex;
+  align-items: center;
 }
 
 .burger__menu_acive {
